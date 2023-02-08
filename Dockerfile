@@ -1,4 +1,5 @@
 FROM alpine:3.14
+EXPOSE 8000
 WORKDIR /www
 RUN apk update
 RUN apk add openjdk11

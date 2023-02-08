@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-http-server-deployment
+  labels:
+    app: simple-http-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-http-server
+  template:
+    metadata:
+      labels:
+        app: simple-http-server
+    spec:
+      containers:
+      - name: simple-http-server
+        image: arsenteroganisyan/otus:v4
+        ports:
+        - containerPort: 8000
