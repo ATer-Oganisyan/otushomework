@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "64b43738-b79d-4ad4-bd06-853976a08f54",
+		"name": "Simple CRUD Postman Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "name:David\nage:38"
+				},
+				"url": "arch.homework/user/create"
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "arch.homework/users",
+				"description": "Get all users"
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/user/delete?id=1",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Get user by id"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "name:Arsen\nage:35\nid:1"
+				},
+				"url": "arch.homework/user/update"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllAfterUpdate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "arch.homework/users",
+				"description": "Get all users"
+			},
+			"response": []
+		},
+		{
+			"name": "getByIdAfterUpdate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/user?id=1",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Get user by id"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "arch.homework/user/delete?id=1",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Delete user"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllAfterDelete",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "arch.homework/users",
+				"description": "Get all users"
+			},
+			"response": []
+		}
+	]
+}
