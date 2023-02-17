@@ -5,6 +5,7 @@ Run:
 git clone https://github.com/ATer-Oganisyan/otushomework.git
 cd crud 
 alias k=kubectl
+helm repo add myZql https://charts.bitnami.com/bitnami
 helm install myzql-release myZql/mysql -f kuber/mysql/values.yml
 k apply -f ./kuber/mysql/migrations/  
 k apply -f ./kuber
